@@ -6,7 +6,7 @@ from django.shortcuts import render
 # home view:
 
 def home(Request):
-    return render(Request, 'home.html')
+    return render(Request, 'index.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -22,3 +22,6 @@ def contact(request):
 
 def products(request):
     return render(request,'products.html')
+
+def quotes(request):
+    return render(request, 'quotes.html')
