@@ -29,5 +29,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('products/', views.products, name='products'),
     path('quotes/', views.quotes, name='quotes'),
+    path('details/', views.details, name='details'),
+    path('tallyprime/', views.tallyprime, name='tallyprime'),
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
