@@ -31,5 +31,8 @@ urlpatterns = [
     path('quotes/', views.quotes, name='quotes'),
     path('details/', views.details, name='details'),
     path('tallyprime/', views.tallyprime, name='tallyprime'),
+    path('downloadpage/',views.downloadpage, name='downloadpage'),
+    path('downloadtp/', views.downloadtp, name='downloadtp'),
+    path('downloadtpel/', views.downloadtpel, name='downloadtpel'),
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
