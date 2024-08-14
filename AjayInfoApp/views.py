@@ -64,3 +64,8 @@ def downloadtpel(request):
         return FileResponse(open(file_path,'rb'), as_attachment=True, filename='tallyprimeeditlog.exe')
     else:
         return HttpResponse("File not found")
+    
+
+# Tally Prime Server view:
+def tpserver(request):
+    return render(request, 'tpserver.html')
