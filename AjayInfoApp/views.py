@@ -69,3 +69,8 @@ def downloadtpel(request):
 # Tally Prime Server view:
 def tpserver(request):
     return render(request, 'tpserver.html')
+
+
+# Tally On Mobile viewws
+def tmobile(request):
+    return render(request, 'tmobile.html')

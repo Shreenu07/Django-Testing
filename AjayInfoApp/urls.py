@@ -48,6 +48,8 @@ urlpatterns = [
     path('downloadtpel/', views.downloadtpel, name='downloadtpel'),
     # urls for tally prime server
     path('tpserver/', views.tpserver, name='tpserver'),
+    # urls for tally on mobile
+    path('tmobile/', views.tmobile, name='tmobile'),
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
