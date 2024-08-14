@@ -74,3 +74,7 @@ def tpserver(request):
 # Tally On Mobile viewws
 def tmobile(request):
     return render(request, 'tmobile.html')
+
+# Tally On Cloud view:
+def tcloud(request):
+    return render(request, 'tcloud.html')
