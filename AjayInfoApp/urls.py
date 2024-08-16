@@ -52,6 +52,8 @@ urlpatterns = [
     path('tmobile/', views.tmobile, name='tmobile'),
     # urls for tally on cloud
     path('tcloud/', views.tcloud, name='tcloud'),
+    # urls for tally AMC
+    path('tamc/', views.tamc, name='tamc')
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

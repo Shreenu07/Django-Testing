@@ -1,0 +1,297 @@
+<!-- loading static and including navbar start -->
+{% load static %} {% include 'navbar.html' %}
+<!-- loading static and including navbar end -->
+
+<!-- tally AMC page start -->
+
+<!-- Add this CSS style block to your template or a linked CSS file -->
+<style>
+  .custom-card-height {
+    height: 350px; /* Adjust the height as needed */
+  }
+  .card-text {
+    overflow: hidden; /* Ensures that text doesn't overflow */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Limits text to a specific number of lines */
+    -webkit-box-orient: vertical;
+  }
+
+
+</style>
+
+<!-- image + description start -->
+<div style="background-color: #e7eaf6" class="container-fluid custom-description-image py-5 wow fadeInUp" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <h3 style="text-align: center" class="mb-0 text-uppercase section-title"><strong>Key Benefits</strong></h3>
+
+    <!-- First Component -->
+    <div class="row g-5 mt-5">
+      <!-- Image Column on the Left -->
+      <div class="col-lg-5" style="min-height: 500px">
+        <div class="position-relative h-100">
+          <img class="position-absolute w-100 h-100 rounded custom-image-size wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/TAMC.png' %}" alt="Image" />
+        </div>
+      </div>
+
+      <!-- Text Column on the Right -->
+      <div class="col-lg-7">
+        <div class="section-title position-relative pb-3 mb-5">
+          <h1 class="mb-0">Tally AMC (Tally Support)</h1>
+        </div>
+        <p class="mb-4">
+          Continue recording transactions or viewing reports while taking backup with no compromise on speed, access, or accuracy. It also limits discrepancies at the client end to the client systems and ensures that neither data on the server nor the operations of other users get impacted. Thus, improves work productivity and business performance by avoiding disruption of work and ensuring zero downtime.
+        </p>
+        <a href="/contact" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact Us</a>
+      </div>
+    </div>
+    <!-- image + description end -->
+
+    <!-- Key benefits start here -->
+    <h1 class="mb-5 text-uppercase" style="text-align: center">Key Benefits</h1>
+
+    <!-- cards for key benefits start -->
+    <div class="container">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height" >
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc1.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-0">Comprehensive Tech Support</h5>
+              <p class="card-text mb-0">Get help from our experts through remote desktop sharing software, telephone, and email during office hours from 09:30 AM to 06:00 PM.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height">
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc2.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-0">Tailored Invoicing Solutions</h5>
+              <p class="card-text mb-0">Create invoices that suit your business needs with our customization service.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height">
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc3.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Scheduled Maintenance Visits</h5>
+              <p class="card-text">Receive quarterly visits from our technicians to check the performance of your Tally software.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height">
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc4.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-0">Free Synergy Add-on Modules</h5>
+              <p class="card-text mb-0">Enjoy two additional features that enhance the functionality of your Tally software.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height">
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc5.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-0">Basic Tally Training</h5>
+              <p class="card-text mb-0">Learn how to use the software effectively with our training service.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-4">
+          <div class="card text-center p-4 rounded mb-4 custom-card-height">
+            <div class="image-wrapper rounded mb-3">
+              <img style="height: 50px;width: 50px;" src="{% static 'img/tamc6.svg' %}" class="card-img-top" alt="Image">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title mb-0">Tally Installation</h5>
+              <p class="card-text mb-0">Ensure that the software is set up correctly for your business with our installation and implementation service.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- cards for key benefits end -->
+    <!-- Key benefits end here -->
+    <br><br><br>
+    <!-- FAQ start -->
+
+
+    <!-- accordion for FAQ start -->
+
+
+
+            
+<!-- Accordion for Tally Information start -->
+
+
+
+<div class="accordion accordion-flush mac" id="accordionFlushExample">
+    <h1 class="mb-5 text-uppercase" style="text-align: center;">FAQ</h1>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            HOW CAN I AVAIL TALLY AMC ?
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">You can avail Tally AMC by contacting us at our phone number or email address. We will provide you with the details and the payment options.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            WHAT ARE THE TIMING OF ONLINE SUPPORT ?
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Our online support is available during office hours from 09:30 AM to 06:00 PM, where you can reach out to our experts through remote desktop sharing software, telephone, and email.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            HOW CAN I GET BASIC TALLY TRAINING ?
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">To get basic Tally training, you can enroll in our training service where you'll learn how to effectively use the software to its fullest potential.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            WHY DO I NEED TALLY AMC ?
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Tally AMC ensures that you have continuous technical support, regular software updates, and maintenance visits to keep your Tally software running smoothly and efficiently.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+            HOW MUCH DOES TALLY AMC COST ?
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">The cost of Tally AMC varies based on your specific requirements and the services included. Please contact us directly for pricing details tailored to your needs.</div>
+      </div>
+    </div>
+</div>
+
+<!-- Accordion for Tally Information end -->
+
+
+    <!-- accordion for FAQ end -->
+    <!-- FAQ end -->
+
+  </div>
+</div>
+<!-- tally AMC page end -->
+
+
+<!-- Contact Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
+            <h1 class="mb-0">If You Have Any Query, Feel Free To Contact Us</h1>
+        </div>
+        <div class="row g-5 mb-5">
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Call to ask any question</h5>
+                        <h4 class="text-primary mb-0">+91 9029005996</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-envelope-open text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Email to get free quote</h5>
+                        <h4 class="text-primary mb-0">ajayinfotech20@gmail.com</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                        <i class="fa fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Visit our office</h5>
+                        <h4 class="text-primary mb-0">004, C-14, Anubhav Shanti Nagar, Sector 5, Mira Road East</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                <!-- <iframe class="position-relative rounded w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.9871146921205!2d72.86108107495942!3d19.282926545444326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b04588c3dbdd%3A0x8d33035a76531dc9!2sAnubhav%20shanti%20nagar%20CHS%20Ltd.!5e0!3m2!1sen!2sin!4v1723464977821!5m2!1sen!2sin" frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+
+<!-- including footer start -->
+{% include 'footer.html' %}
+<!-- including footer end -->

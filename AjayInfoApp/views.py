@@ -78,3 +78,7 @@ def tmobile(request):
 # Tally On Cloud view:
 def tcloud(request):
     return render(request, 'tcloud.html')
+
+# Tally AMC view :
+def tamc(request):
+    return render(request, 'tamc.html')
