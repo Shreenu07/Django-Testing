@@ -82,3 +82,7 @@ def tcloud(request):
 # Tally AMC view :
 def tamc(request):
     return render(request, 'tamc.html')
+
+# Tally Corporate Training view :
+def tctraining(request):
+    return render(request, 'tctraining.html')

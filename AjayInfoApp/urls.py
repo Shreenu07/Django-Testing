@@ -53,7 +53,9 @@ urlpatterns = [
     # urls for tally on cloud
     path('tcloud/', views.tcloud, name='tcloud'),
     # urls for tally AMC
-    path('tamc/', views.tamc, name='tamc')
+    path('tamc/', views.tamc, name='tamc'),
+    # urls for tally corporate training 
+    path('tctraining/', views.tctraining, name='tctraining'),
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
