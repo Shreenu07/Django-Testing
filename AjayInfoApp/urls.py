@@ -56,6 +56,8 @@ urlpatterns = [
     path('tamc/', views.tamc, name='tamc'),
     # urls for tally corporate training 
     path('tctraining/', views.tctraining, name='tctraining'),
+    # urls for tally customization
+    path('tcustomization/', views.tcustomization, name='tcustomization')
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

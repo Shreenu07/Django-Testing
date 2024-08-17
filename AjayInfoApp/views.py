@@ -86,3 +86,7 @@ def tamc(request):
 # Tally Corporate Training view :
 def tctraining(request):
     return render(request, 'tctraining.html')
+
+# Tally Customization view :
+def tcustomization(request):
+    return render(request, 'tcustomization.html')
