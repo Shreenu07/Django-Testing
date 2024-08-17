@@ -60,6 +60,8 @@ urlpatterns = [
     path('tcustomization/', views.tcustomization, name='tcustomization'),
     # urls for tally synchronization
     path('tsynchronization/', views.tsynchronization, name='tsynchronization'),
+    # urls for gallery
+    path('gallery/', views.gallery, name='gallery')
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

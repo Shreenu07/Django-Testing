@@ -94,3 +94,7 @@ def tcustomization(request):
 # Tally Synchronization views:
 def tsynchronization(request):
     return render(request, 'tsynchronization.html')
+
+# Gallery view:
+def gallery(request):
+    return render(request, 'gallery.html')
