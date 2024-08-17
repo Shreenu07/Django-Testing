@@ -90,3 +90,7 @@ def tctraining(request):
 # Tally Customization view :
 def tcustomization(request):
     return render(request, 'tcustomization.html')
+
+# Tally Synchronization views:
+def tsynchronization(request):
+    return render(request, 'tsynchronization.html')

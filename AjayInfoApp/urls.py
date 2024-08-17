@@ -57,7 +57,9 @@ urlpatterns = [
     # urls for tally corporate training 
     path('tctraining/', views.tctraining, name='tctraining'),
     # urls for tally customization
-    path('tcustomization/', views.tcustomization, name='tcustomization')
+    path('tcustomization/', views.tcustomization, name='tcustomization'),
+    # urls for tally synchronization
+    path('tsynchronization/', views.tsynchronization, name='tsynchronization'),
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
