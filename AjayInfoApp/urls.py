@@ -61,7 +61,14 @@ urlpatterns = [
     # urls for tally synchronization
     path('tsynchronization/', views.tsynchronization, name='tsynchronization'),
     # urls for gallery
-    path('gallery/', views.gallery, name='gallery')
+    path('gallery/', views.gallery, name='gallery'),
+    # urls for blog details
+    path('blogdetails/', views.blogdetails, name='blogdetails'),
+    # urls for blog details 1
+    path('blogdetails1/', views.blogdetails1, name='blogdetails'),
+    # urls for blog details 2
+    path('blogdetails2/', views.blogdetails2, name='blogdetails2'),
+
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

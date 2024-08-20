@@ -98,3 +98,15 @@ def tsynchronization(request):
 # Gallery view:
 def gallery(request):
     return render(request, 'gallery.html')
+
+# blog de3tails view:
+def blogdetails(request):
+    return render(request, 'blogdetails.html')
+
+# blog details 1 view:
+def blogdetails1(request):
+    return render(request, 'blogdetails1.html')
+
+# blog details 2 view
+def blogdetails2(request):
+    return render(request, 'blogdetails2.html')
