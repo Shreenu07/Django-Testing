@@ -1,1 +1,172 @@
-<h1>Blog Details Page</h1>
+<!-- loading static and including navbar start -->
+{% load static %} {% include 'navbar.html' %}
+<!-- loading static and including navbar end -->
+
+<!-- styling start -->
+<style>
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px;
+    gap: 20px; /* Added gap for spacing between containers */
+  }
+
+  .image-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1; /* Ensures it takes available space */
+  }
+
+  .image {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .text-below-image {
+    margin-top: 10px;
+    width: 100%; /* Match container width */
+  }
+
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make width flexible */
+    max-width: 300px; /* Limit width for responsiveness */
+    height: auto; /* Adjust based on content */
+    background-color: #f0f0f0;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    padding: 20px; /* Add padding */
+  }
+
+  .category-recent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between columns */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .blog-category,
+  .recent-posts {
+    flex: 1; /* Ensure columns take equal space */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .blog-category {
+    background-color: #e0e0e0;
+  }
+
+  .recent-posts {
+    background-color: #d0d0d0;
+  }
+
+  .accordion-background {
+    background-color: #e7eaf6;
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .something {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+    gap: 10px; /* Spacing between image and text */
+  }
+
+  .something a {
+    text-align: center; /* Center text in links */
+  }
+
+
+</style>
+<!-- styling end -->
+
+<!-- blog details page start -->
+<div class="accordion-background">
+  <div class="main-container">
+    <!-- First Container: Image and Text -->
+    <div class="image-text-container">
+      <img src="{% static 'img/bdetails.png' %}" alt="Image" class="image" />
+      <h1 class="text-below-image">
+        Mastering the Dashboard Feature in TallyPrime
+      </h1>
+      <p class="text-below-image">
+        Embark on a journey of discovery as we delve into the intricacies of
+        TallyPrime’s Dashboard. From navigating the Dashboard interface to
+        customizing tiles to suit your needs, we’ll cover everything you need to
+        know, including setting up Dashboard as your go-to home screen and
+        implementing security measures to safeguard sensitive information.
+      </p>
+      <p class="text-below-image">
+        The Dashboard in TallyPrime serves as a centralized hub for all your
+        critical business data, facilitating in-depth analysis and providing
+        valuable insights. Drawing information from over 350 TallyPrime reports,
+        it acts as a comprehensive monitoring tool, offering a holistic view of
+        your business’s overall health. From sales and purchase trends to asset
+        management and cash flow, the default Dashboard provides an array of
+        tiles designed to give you a snapshot of your business’s performance.
+        Plus, with the flexibility to add or remove tiles, you can tailor the
+        Dashboard to meet your specific needs. But the Dashboard is more than
+        just a data aggregator. It seamlessly integrates various pieces of
+        information, allowing you to gain a deeper understanding of your
+        business dynamics. Whether you’re examining group data, ledger details,
+        or cost center insights, the Dashboard presents a cohesive picture of
+        your business landscape. Visual representations such as bar and line
+        graphs make it easy to spot trends and make comparisons, simplifying the
+        analysis of vast amounts of data. And with options to customize the
+        display, including the ability to toggle between numerical systems, you
+        can ensure that the Dashboard meets your exact requirements. Configure
+        the Dashboard to your liking, whether it’s adjusting individual tiles or
+        optimizing the entire layout. Each tile comes with its own set of
+        configuration options, giving you full control over your Dashboard
+        experience. Need to focus on a specific tile? Simply expand it for a
+        closer look. And if you prefer to have the Dashboard as your default
+        home screen, TallyPrime makes it easy to set up, ensuring quick access
+        to vital information every time you log in. In essence, the Dashboard in
+        TallyPrime isn’t just a tool—it’s your gateway to a deeper understanding
+        of your business. Explore its features, unlock its potential, and
+        empower yourself to make informed decisions that drive your business
+        forward.
+      </p>
+    </div>
+
+    <!-- Second Container: Search Section -->
+    <div class="search-section">
+      <p style="text-align: center;margin: 10px;">Recent Posts</p>
+      <br>
+      <div class="something">
+        <a href="/blogdetails"><img style="width: 200px;height: 100px;" src="{%static 'img/bdetails.png'%}" alt=""><p style="text-align: center;">click here</p></a>
+      </div>
+      <br>
+      <div class="something">
+        <a href="/blogdetails1"><img style="width: 200px;height: 100px;" src="{%static 'img/bdetails1.png'%}" alt=""><p style="text-align: center;">click here</p></a>
+      </div>
+      <br>
+      <div class="something">
+        <a href="/blogdetails2"><img style="width: 200px;height: 100px;" src="{%static 'img/bdetails2.png'%}" alt=""><p style="text-align: center;">click here</p></a>
+      </div>
+      <br>
+      <div class="something">
+        <a href=""><img style="width: 200px;height: 100px;" src="{%static 'img/bdetails.png'%}" alt=""><p style="text-align: center;">click here</p></a>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+
+<!-- including contact start -->
+ {%include 'contactinfo.html'%}
+<!-- including contact end -->
+
+<!-- including footer start -->
+{% include 'footer.html' %}
+<!-- including footer end -->

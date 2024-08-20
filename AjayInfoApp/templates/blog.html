@@ -20,6 +20,7 @@
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
   position: relative;
   margin: 20px;
+  height: 150px;
 }
 
 .card > * + * {
@@ -81,18 +82,39 @@
     padding: 20px; /* Add padding to visualize background */
   }
 
+  .fbg {
+    background-image: url("{% static 'img/bdetails.png' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .sbg {
+    background-image: url("{% static 'img/bdetails1.png' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .tbg {
+    background-image: url("{% static 'img/bdetails2.png' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
 </style>
 
 
 <!-- blog cards start -->
 <div class="accordion-background">
     <div style="display: flex;justify-content: center;" class="container mt-5">
-        <div class="card">
-            <h3 class="card__title text-uppercase">Mastering The Dashboard Features In Tally
-            </h3>
-            <p class="card__content">Professional And Reliable </p>
+        <div class="card fbg">
+            <!-- <h3 class="card__title text-uppercase">Mastering The Dashboard Features In Tally
+            </h3> -->
+            <!-- <p class="card__content">Professional And Reliable </p> -->
             <div class="card__date">
-                August 20, 2024
+                <!-- August 20, 2024 -->
             </div>
             <div class="card__arrow">
                 <a href="/blogdetails"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
@@ -100,12 +122,12 @@
                 </svg></a>
             </div>
         </div>
-        <div class="card">
-            <h3 class="card__title text-uppercase">working with reports in tallyprime
-            </h3>
-            <p class="card__content">Professional And Reliable </p>
+        <div class="card sbg">
+            <!-- <h3 class="card__title text-uppercase">working with reports in tallyprime
+            </h3> -->
+            <!-- <p class="card__content">Professional And Reliable </p> -->
             <div class="card__date">
-                August 20, 2024
+                <!-- August 20, 2024 -->
             </div>
             <div class="card__arrow">
                 <a href="/blogdetails1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
@@ -113,12 +135,12 @@
                 </svg></a>
             </div>
         </div>
-        <div class="card">
-            <h3 class="card__title text-uppercase">Discover TallyPrime: Simplifying Business
+        <div class="card tbg">
+            <h3 class="card__title text-uppercase">
             </h3>
-            <p class="card__content">Professional And Reliable </p>
+            <p class="card__content"></p>
             <div class="card__date">
-                August 20, 2024
+                <!-- August 20, 2024 -->
             </div>
             <div class="card__arrow">
                 <a href="/blogdetails2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
