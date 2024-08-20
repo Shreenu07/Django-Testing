@@ -110,3 +110,19 @@ def blogdetails1(request):
 # blog details 2 view
 def blogdetails2(request):
     return render(request, 'blogdetails2.html')
+
+# gst services views:
+def gstservice(request):
+    return render(request, 'gstservice.html')
+
+# gst filling views:
+def gstfilling(request):
+    return render(request, 'gstfilling.html')
+
+# inr filling views:
+def inrfilling(request):
+    return render(request, 'inrfilling.html')
+
+# data filling views:
+def datafilling(request):
+    return render(request, 'datafilling.html')
