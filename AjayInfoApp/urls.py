@@ -68,6 +68,14 @@ urlpatterns = [
     path('blogdetails1/', views.blogdetails1, name='blogdetails'),
     # urls for blog details 2
     path('blogdetails2/', views.blogdetails2, name='blogdetails2'),
+    # urls for gst services
+    path('gstservice/', views.gstservice, name='gstservice'),
+    # urls for gst filling
+    path('gstfilling/', views.gstfilling, name='gstfilling'),
+    # urls for inr filling
+    path('inrfilling/', views.inrfilling, name='inrfilling'),
+    # urls for data filling
+    path('datafilling/', views.datafilling, name='datafilling'),
 
 
     # other paths
