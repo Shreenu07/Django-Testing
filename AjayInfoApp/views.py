@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, FileResponse
+from django.http import HttpResponse, FileResponse, Http404
 from django.conf import settings
 import os
 
@@ -126,3 +126,25 @@ def inrfilling(request):
 # data filling views:
 def datafilling(request):
     return render(request, 'datafilling.html')
+
+# download tally prime version 4.0
+def downloadtp4(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprime4.exe')
+    if os.path.exists(file_path):
+        try:
+            return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprimeversion4.exe')
+        except Exception as e:
+            # Optionally log the exception
+            return HttpResponse(f"An error occurred while processing your request: {str(e)}")
+    else:
+        raise Http404("File not found")
+
+
+# download tally prime version edit log 4.0 views
+def downloadtpel4(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprimeelg4.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprimeeditlog4.exe')
+    else:
+        return HttpResponse("File not found")
+
