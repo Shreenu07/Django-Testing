@@ -148,3 +148,36 @@ def downloadtpel4(request):
     else:
         return HttpResponse("File not found")
 
+
+# download tally prime 3.0.1 version views
+def downloadtp301(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprime301.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprime301.exe')
+    else:
+        return HttpResponse('File not found')
+    
+
+# download tally prime edit log 3.0.1 version view
+def downloadtpel301(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprimeeditlog301.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path , 'rb'), as_attachment=True, filename='tallyprimeeditlog301.exe')
+    else:
+        return HttpResponse("File not found")
+    
+# download tally prime 3.0 version view
+def downloadtp3(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprime3.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprime3.exe')
+    else:
+        return HttpResponse("File not found")
+    
+# download tally prime 3.0 version view
+def downloadtpel3(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprimeeditlog3.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprimeeditlog3.exe')
+    else:
+        return HttpResponse("File not found")
