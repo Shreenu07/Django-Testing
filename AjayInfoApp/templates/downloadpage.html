@@ -1,74 +1,657 @@
 <!-- loading static and including navbar start -->
- {%load static%}
- {%include 'navbar.html'%}
- <div class="container-fluid bg-primary py-5 bg-header">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Download Page</h1>
-            <!-- <a href="" class="h5 text-white">Home</a>
+{% load static %} {% include 'navbar.html' %}
+<div class="container-fluid bg-primary py-5 bg-header">
+  <div class="row py-5">
+    <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+      <h1 class="display-4 text-white animated zoomIn">Download Page</h1>
+      <!-- <a href="" class="h5 text-white">Home</a>
             <i class="far fa-circle text-white px-2"></i>
             <a href="" class="h5 text-white">Services</a> -->
-        </div>
     </div>
   </div>
-  </div>
+</div>
 <!-- loading static and including navbar end -->
+
+<!-- styling start -->
+ <style>
+    .btn-style {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .accordion-item {
+    border: 1px solid #ddd; /* Set your desired border color */
+    border-radius: 4px; /* Optional: Adds a bit of rounding to the corners */
+     /* Space between accordion items */
+}
+
+/* Apply border to the header and content sections */
+.accordion-header {
+    border-bottom: 5px solid #ddd; /* Border between header and content */
+}
+
+.accordion-body {
+    border-top: none; /* Removes any additional top border */
+}
+ </style>
+<!-- styling end -->
 
 
 <!-- Tally Products List Start here -->
-
-
-
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Tally 4.1v </h5>
-            <p class="mb-0">Experience a new-age business management software for new-age businesses. Now, with simplified MSME payments, e-commerce report in GSTR-1, intuitive report dashboards and more.</p>
+<div class="container-fluid " style="background-color: #e7eaf6" data-wow-delay="0.1s">
+    <div class="container ">
+      <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
+        <h5 class="fw-bold text-primary text-uppercase">Tally 4.1v</h5>
+      </div>
+      <div class=" text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
+        <p class="mb-0">
+          Experience a new-age business management software for new-age businesses. Now, with simplified MSME payments, e-commerce report in GSTR-1, intuitive report dashboards, and more.
+        </p>
+      </div>
+  
+      <!-- Download Sections in a row -->
+      <div class="row justify-content-center">
+        <!-- First Download Section -->
+        <div class="col-md-4 mb-4 text-center">
+          <div class="bg-light rounded py-4 px-5">
+            <h4 class="text-primary mb-1">Tally Prime 4.1</h4>
+            <a href="{% url 'downloadtp' %}" class="btn btn-primary py-2 px-4 mt-4">Download</a>
+          </div>
         </div>
-        <div class="row g-0">
-            <div style="margin-right: 150px;margin-left: 150px;" class="col-lg-4 wow slideInUp"
-                data-wow-delay="0.6s">
-                <div class="bg-light rounded">
-                    <div class="border-bottom py-4 px-5 mb-4">
-                        <h4 class="text-primary mb-1">Tally Prime</h4>
-                        <small class="text-uppercase">release 4.1</small>
-                    </div>
-                    <div class="p-5 pt-0">
-                        <h1 class="display-5 mb-3">
-                            <!-- <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
-                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small> -->
-                        </h1>
-                        
-                        <a href="{% url 'downloadtp' %}" class="btn btn-primary py-2 px-4 mt-4">Download</a>
+  
+        <!-- Second Download Section -->
+        <div class="col-md-4 mb-4 text-center">
+          <div class="bg-light rounded py-4 px-5">
+            <h4 class="text-primary mb-1">Tally Prime 4.1 (Edit Log)</h4>
+            <a href="{% url 'downloadtpel' %}" class="btn btn-primary py-2 px-4 mt-4">Download</a>
+          </div>
+        </div>
+      </div>
+  
+      <br /><br /><br /><br /><br /><br />
 
-                    </div>
-                </div>
-            </div>
+    <!-- Download Accordion start -->
+    <div class="accordion accordion-flush mac" id="accordionFlushExample">
+      
+        
 
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                <div class="bg-light rounded">
-                    <div class="border-bottom py-4 px-5 mb-4">
-                        <h4 class="text-primary mb-1">Tally Prime Edit Log</h4>
-                        <small class="text-uppercase">release 4.1</small>
-                    </div>
-                    <div class="p-5 pt-0">
-                        <h1 class="display-5 mb-3">
-                            <!-- <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
-                                class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small> -->
-                        </h1>
-                        
-                        <a href="{% url 'downloadtpel' %}" class="btn btn-primary py-2 px-4 mt-4">Download</a>
-                    </div>
-                </div>
+        <!-- heading start -->
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
+            <h5 class="fw-bold  text-uppercase">Download Previous Version</h5>
+          </div>
+          <div class=" text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px">
+           
+          </div>
+        <!-- heading end -->
+
+
+    <!-- first accordion start -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+            >
+            TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 4.0
+        </button>
+    </h2>
+    <div
+    id="flush-collapseOne"
+    class="accordion-collapse collapse"
+    aria-labelledby="flush-headingOne"
+    data-bs-parent="#accordionFlushExample"
+    >
+    <div class="accordion-body">
+        <p class="mb-0">
+            1.	TallyPrime with WhatsApp for Business
+        </p>
+        <p class="mb-0">
+            2.	Import Data from MS Excel
+        </p>
+        <p class="mb-0">
+                3.	Graphical Dashboard
+            </p>
+            <p class="mb-0"><b>Date - </b> 12 December 2023</p>
+            <div class="btn-style">
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Prime Download </a
+                >
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Edit Log Download</a
+                >
             </div>
+        </div>
+    </div>
+    
+    <!-- first accordion end -->
+
+    <!-- second accordion start -->
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+            >
+            TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 3.0.1
+        </button>
+    </h2>
+    <div
+    id="flush-collapseTwo"
+    class="accordion-collapse collapse"
+    aria-labelledby="flush-headingTwo"
+    data-bs-parent="#accordionFlushExample"
+    >
+    <div class="accordion-body">
+        <p class="mb-0">
+            1.	Missing or invalid State for Consignee (Ship To) & Dispatch From
+        </p>
+        <p class="mb-0">
+            2.	Mismatch between State and Pincode
+        </p>
+        <p class="mb-0">
+            3.	Mismatch between HSN and Type of supply
+        </p>
+        <p class="mb-0">
+            4.	Invoice numbers starting with zero
+        </p>
+        <p class="mb-0"><b>Date - </b> 21 July 2023</p>
+        <div class="btn-style">
+            <a
+            href="{% url 'downloadtpel' %}"
+            class="btn btn-primary py-2 px-4 mt-4"
+            >Tally Prime Download </a
+            >
+            <a
+            href="{% url 'downloadtpel' %}"
+            class="btn btn-primary py-2 px-4 mt-4"
+            >Tally Edit Log Download</a
+            >
         </div>
     </div>
 </div>
 
+<!-- second accordion end -->
+
+<!-- third accordion start -->
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+        <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseThree"
+        aria-expanded="false"
+        aria-controls="flush-collapseThree"
+        >
+        TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 3.0
+    </button>
+</h2>
+<div
+id="flush-collapseThree"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingThree"
+data-bs-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+    <p class="mb-0">
+        1.	Multiple GST Registrations in a Single Company
+    </p>
+    <p class="mb-0">
+        2.	e-Invoice and e-Way Bill applicability
+    </p>
+    <p class="mb-0">
+        3.	Transactions: All vouchers.
+    </p>
+    <p class="mb-0">
+        4.	Masters: Stock items, ledgers, and accounting groups.
+    </p>
+    <p class="mb-0">
+        5.	Company data: Migration, repair, import, split, and so on.
+    </p>
+    <p class="mb-0">
+        6.	Add Digital Signature in PDF Documents
+    </p>
+    <p class="mb-0"><b>Date - </b> 12 June 2023</p>
+    <div class="btn-style">
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Prime Download </a
+        >
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Edit Log Download</a
+        >
+    </div>
+</div>
+</div>
+
+<!-- third accordion end -->
+
+<!-- fourth accordion start -->
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+          TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 2.1
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <p class="mb-0">
+                1.	Latest TallyPrime releases
+            </p>
+            <p class="mb-0">
+                2.	TSS validity and renewal
+            </p>
+            <p class="mb-0">
+                3.	Rental license expiry and renewal
+            </p>
+            <p class="mb-0"><b>Date - </b> 21 March 2022</p>
+            <div class="btn-style">
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Prime Download </a
+                >
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Edit Log Download</a
+                >
+          </div>
+        </div>
+      </div>
+
+      <!-- fourth accordion end -->
+
+      <!-- fifth accordion start -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+              <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive"
+              aria-expanded="false"
+              aria-controls="flush-collapseFive"
+              >
+              TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 2.0.1
+            </button>
+        </h2>
+        <div
+        id="flush-collapseFive"
+        class="accordion-collapse collapse"
+        aria-labelledby="flush-headingFive"
+        data-bs-parent="#accordionFlushExample"
+        >
+        <div class="accordion-body">
+            <p class="mb-0">
+                1.	Refined UI for smoother navigation and better user experience.
+            </p>
+            <p class="mb-0">
+                2.	Enhanced reliability in syncing data between multiple locations, making remote work more seamless.
+            </p>
+            <p class="mb-0">
+                3.	Adaptations to the latest GST regulations, ensuring easier filing and compliance.
+            </p>
+            <p class="mb-0">
+                4.	Minor improvements in the bank reconciliation process for more accurate and faster matching.
+            </p>
+            <p class="mb-0">
+                5.	Introduction of more options to tailor financial and business reports according to user needs.
+            </p>
+            <p class="mb-0"><b>Date - </b> 9 December 2021</p>
+            <div class="btn-style">
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Prime Download </a
+                >
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Edit Log Download</a
+                >
+        </div>
+    </div>
+</div>
+<!-- fifth accordion start -->
+
+
+
+<!-- sixth accordion start -->
+
+
+<!-- New sections added -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+            <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSix"
+            aria-expanded="false"
+            aria-controls="flush-collapseSix"
+            >
+            TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 2.0
+        </button>
+    </h2>
+    <div
+    id="flush-collapseSix"
+    class="accordion-collapse collapse"
+          aria-labelledby="flush-headingSix"
+          data-bs-parent="#accordionFlushExample"
+          >
+          <div class="accordion-body">
+            <p class="mb-0">
+                1.	Generate e-Way Bill online at the time of voucher creation.
+            </p>
+            <p class="mb-0">
+                2.	Generate multiple e-Way Bills online at one shot.
+            </p>
+            <p class="mb-0">
+                3.	Cancel e-Way Bill, update Part B & Transporter ID, and extend validity for transactions in bulk.
+            </p>
+            <p class="mb-0">
+                4.	Print e-Way Bill for invoices with e-Way Bill number and QR Code as per the government’s requirements.
+            </p>
+            <p class="mb-0">
+                5.	Track the status of e-Way Bills using the e-Way Bill report and e-Way Bill Register.
+            </p>
+            <p class="mb-0">
+                6.	Get the latest e-Way Bill information and status from the e-Way Bill system to a transaction using e-Way Bill report and e-Way Bill Register.
+            </p>
+            <p class="mb-0"><b>Date - </b>23 July 2021</p>
+            <div class="btn-style">
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Prime Download </a
+                >
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Edit Log Download</a
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- sixth accordion end -->
+
+
+    <!-- seventh accordion start -->
+    
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSeven">
+            <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseSeven"
+            aria-expanded="false"
+            aria-controls="flush-collapseSeven"
+            >
+            TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 1.1.4
+        </button>
+    </h2>
+    <div
+    id="flush-collapseSeven"
+    class="accordion-collapse collapse"
+    aria-labelledby="flush-headingSeven"
+    data-bs-parent="#accordionFlushExample"
+    >
+    <div class="accordion-body">
+        <p class="mb-0">
+            1.	 Integrated support for e-invoicing as per government regulations, allowing businesses to generate IRNs (Invoice Reference Numbers) directly from Tally.
+        </p>
+        <p class="mb-0">
+            2.	Enhanced GST compliance tools, including auto-population of GSTR-1, GSTR-3B, and other GST-related forms for easier filing.
+        </p>
+        <p class="mb-0">
+            3.	 Better tracking of inventory with more detailed reporting and streamlined stock management processes.
+        </p>
+        <p class="mb-0">
+            4.	New features to handle bank reconciliation more efficiently, including automatic reconciliation for supported banks.
+        </p>
+        <p class="mb-0">
+            5.	Strengthened user access controls and data encryption to protect sensitive business information.
+        </p>
+        <p class="mb-0">
+            6.	General performance improvements, making Tally Prime faster and more responsive in day-to-day operations.
+        </p>
+        <p class="mb-0"><b>Date - </b>04 May 2021</p>
+        <div class="btn-style">
+            <a
+            href="{% url 'downloadtpel' %}"
+            class="btn btn-primary py-2 px-4 mt-4"
+            >Tally Prime Download </a
+            >
+            <a
+            href="{% url 'downloadtpel' %}"
+            class="btn btn-primary py-2 px-4 mt-4"
+            >Tally Edit Log Download</a
+            >
+    </div>
+</div>
+</div>
+<!-- seventh accordion end -->
+
+<!-- eight accordion start -->
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingEight">
+        <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseEight"
+        aria-expanded="false"
+        aria-controls="flush-collapseEight"
+        >
+        TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 1.1.3
+    </button>
+</h2>
+<div
+id="flush-collapseEight"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingEight"
+data-bs-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+    <p class="mb-0">
+        1.	 Enhanced support for generating e-invoices with seamless integration, making it easier to comply with government regulations.
+    </p>
+    <p class="mb-0">
+        2.	Improvements in data import and export functionalities, enabling smoother and more accurate data sharing between different systems and stakeholders.
+    </p>
+    <p class="mb-0">
+        3.	  Additional features for handling bank reconciliations, including support for more banks and automatic reconciliation processes.
+    </p>
+    <p class="mb-0">
+        4.	Refinements to GST-related features, including better handling of HSN/SAC codes and improved accuracy in GST reports.
+    </p>
+    <p class="mb-0">
+        5.	UI/UX enhancements for a more intuitive and user-friendly experience, with better navigation and easier access to frequently used features.
+    </p>
+    <p class="mb-0">
+        6.	Strengthened security measures, including better control over user access and improved data protection mechanisms.
+    </p>
+    <p class="mb-0"><b>Date - </b>10 March 2021</p>
+    <div class="btn-style">
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Prime Download </a
+        >
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Edit Log Download</a
+        >
+        </div>
+    </div>
+</div>
+<!-- eight accordion end -->
+
+
+<!-- ninth accordion start -->
+
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingNine">
+        <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseNine"
+        aria-expanded="false"
+        aria-controls="flush-collapseNine"
+        >
+        TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 1.1.2
+    </button>
+</h2>
+<div
+id="flush-collapseNine"
+class="accordion-collapse collapse"
+aria-labelledby="flush-headingNine"
+data-bs-parent="#accordionFlushExample"
+>
+<div class="accordion-body">
+    <p class="mb-0">
+        1.	 Added support for e-invoicing, including the ability to generate Invoice Reference Numbers (IRNs) and print QR codes directly on invoices.
+    </p>
+    <p class="mb-0">
+        2.	Updates to ensure smoother filing of GST returns, with enhanced reporting for GSTR-1, GSTR-3B, and other GST forms.
+    </p>
+    <p class="mb-0">
+        3.	  Better handling of bank reconciliation with more banks supported and easier reconciliation processes.
+    </p>
+    <p class="mb-0">
+        4.	Optimizations to improve the speed and efficiency of Tally Prime, especially in handling large volumes of data.
+    </p>
+    <p class="mb-0">
+        5.	Minor tweaks to the user interface to make navigation easier and more intuitive, with quicker access to key features.
+    </p>
+    <p class="mb-0">
+        6.	Implementation of additional security measures to protect sensitive business data and enhance user access controls.
+    </p>
+    <p class="mb-0"><b>Date - </b>15 February 2021</p>
+    <div class="btn-style">
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Prime Download </a
+        >
+        <a
+        href="{% url 'downloadtpel' %}"
+        class="btn btn-primary py-2 px-4 mt-4"
+        >Tally Edit Log Download</a
+        >
+</div>
+</div>
+</div>
+<!-- ninth accordion end -->
+
+<!-- tenth accordion start -->
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTen">
+        <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseTen"
+        aria-expanded="false"
+        aria-controls="flush-collapseTen"
+        >
+        TALLY PRIME AND TALLY PRIME EDIT LOG RELEASE 1.1.1
+    </button>
+</h2>
+        <div
+          id="flush-collapseTen"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTen"
+          data-bs-parent="#accordionFlushExample"
+          >
+          <div class="accordion-body">
+            <p class="mb-0">
+                1.	 Updates to GST-related functionalities, including improved accuracy in tax calculations and better handling of HSN/SAC codes.
+            </p>
+            <p class="mb-0">
+                2.	Further improvements to the bank reconciliation process, including support for more banks and automated reconciliation options.
+            </p>
+            <p class="mb-0">
+                3.	  Initial support for generating and managing e-invoices in compliance with government regulations, including the ability to generate Invoice Reference Numbers (IRNs).
+            </p>
+            <p class="mb-0">
+                4.	Optimizations to enhance the speed and responsiveness of Tally Prime, particularly when working with large datasets.
+            </p>
+            <p class="mb-0">
+                5.	Minor adjustments to the UI for a more streamlined and user-friendly experience, improving navigation and accessibility.
+            </p>
+            <p class="mb-0">
+                6.	Addressed various bugs and issues from previous versions, resulting in a more stable and reliable software experience.
+            </p>
+            <p class="mb-0"><b>Date - </b>23 January 2021</p>
+            <div class="btn-style">
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Prime Download </a
+                >
+                <a
+                href="{% url 'downloadtpel' %}"
+                class="btn btn-primary py-2 px-4 mt-4"
+                >Tally Edit Log Download</a
+                >
+            </div>
+        </div>
+    </div>
+
+
+    <!-- tenth accordion end -->
+     
+    <!-- Download Accordion end -->
+  </div>
+</div>
 <!-- Tally Products List End here -->
 
+<!-- including contactinfo start -->
+ {%include 'contactinfo.html'%}
+<!-- including contactinfo end -->
 
 
 <!-- including footer start -->
- {%include 'footer.html'%}
+{% include 'footer.html' %}
 <!-- including footer end -->
