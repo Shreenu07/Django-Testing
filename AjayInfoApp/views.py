@@ -236,3 +236,24 @@ def downloadtp113(request):
         return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprime113.exe')
     else:
         return HttpResponse("File not found")
+    
+# download tally prime 1.1.2 views
+def downloadtp112(reuqest):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprime112.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprime112.exe')
+    else:
+        return HttpResponse("File not found")
+    
+
+
+# download tally prime 1.1.1 view
+def downloadtp111(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'downloads', 'tallyprime111.exe')
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='tallyprime111.exe')
+    else:
+        return HttpResponse("File not found")
+    
+
+
