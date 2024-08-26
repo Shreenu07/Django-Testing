@@ -88,6 +88,8 @@ urlpatterns = [
     path('downloadtp111', views.downloadtp111, name='downloadtp111'),
     # urls for career page
     path('career/', views.career_page, name='career'),
+    # urls for testimonials page
+    path('testimonial/', views.testimonials, name='testimonial'),
 
 
     # other paths

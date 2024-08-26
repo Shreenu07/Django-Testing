@@ -260,3 +260,8 @@ def downloadtp111(request):
 # career page view
 def career_page(request):
     return render(request, 'career.html')
+
+
+# testimononials page vew
+def testimonials(request):
+    return render(request, 'testimonials.html')
