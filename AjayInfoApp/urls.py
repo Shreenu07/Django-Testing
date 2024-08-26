@@ -70,6 +70,18 @@ urlpatterns = [
     path('downloadtp3', views.downloadtp3, name='downloadtp3'),
     # urls for tally prime edit log 3.0 version download
     path('downloadtpel3', views.downloadtpel3, name='downloadtpel3'),
+    # urls for tally prime 2.1 version download
+    path('downloadtp21/', views.downloadtp21, name='downloadtp21'),
+    # urls for tally prime edit log 2.1 version download
+    path('downloadtpel21', views.downloadtpel21, name='downloadtpel21'),
+    # urls for tally prime 2.0.1 version download
+    path('downloadtp201', views.downloadtp201, name='downloadtp201'),
+    # urls for tally prime 2.0 version download
+    path('downloadtp2', views.downloadtp2, name='downloadtp2'),
+    # urls for tally prime 1.1.4 version download
+    path('downloadtp114', views.downloadtp114, name='downloadtp114'),
+    # urls for tally prime 1.1.3 version downlad
+    path('downloadtp113', views.downloadtp113, name='downloadtp113'),
 
 
     # other paths
