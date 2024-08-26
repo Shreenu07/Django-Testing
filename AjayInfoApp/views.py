@@ -265,3 +265,12 @@ def career_page(request):
 # testimononials page vew
 def testimonials(request):
     return render(request, 'testimonials.html')
+
+# team page view
+def team_page(request):
+    return render(request, 'team.html')
+
+
+# features page views
+def features_page(request):
+    return render(request, 'feature.html')

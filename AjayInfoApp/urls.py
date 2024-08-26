@@ -90,6 +90,10 @@ urlpatterns = [
     path('career/', views.career_page, name='career'),
     # urls for testimonials page
     path('testimonial/', views.testimonials, name='testimonial'),
+    # urls for team page
+    path('team/', views.team_page, name='team'),
+    # urls for featurs page
+    path('features/', views.features_page, name='features'),
 
 
     # other paths
