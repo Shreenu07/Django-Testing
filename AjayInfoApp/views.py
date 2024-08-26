@@ -257,3 +257,6 @@ def downloadtp111(request):
     
 
 
+# career page view
+def career_page(request):
+    return render(request, 'career.html')

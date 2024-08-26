@@ -1,0 +1,117 @@
+<!-- loading static and including navbar start -->
+ {%load static%}
+ {%include 'navbar.html'%}
+
+ <div class="container-fluid bg-primary py-5 bg-header">
+    <div class="row py-5">
+      <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+        <h1 class="display-4 text-white animated zoomIn">Career</h1>
+        <!-- <a href="" class="h5 text-white">Home</a>
+              <i class="far fa-circle text-white px-2"></i>
+              <a href="" class="h5 text-white">Services</a> -->
+      </div>
+    </div>
+  </div>
+
+<!-- loading static and including navbar end -->
+
+
+<!-- styling start -->
+<style>
+    .left-section {
+        /* Sticky positioning for the left section */
+        position: sticky;
+        top: 0; /* Keeps the element at the top of the viewport when scrolling */
+        background-color: #f0f4f8; /* Background color to differentiate */
+        z-index: 10; /* Ensure it is above other content */
+    }
+
+    .right-section {
+        /* Make sure the right section takes full height and is scrollable */
+        overflow-y: auto;
+        height: 100vh; /* Full viewport height */
+    }
+
+    @media (max-width: 768px) {
+        .left-section {
+            position: static;
+            width: 100%;
+        }
+
+        .right-section {
+            width: 100%;
+        }
+    }
+</style>
+<!-- styling end -->
+
+
+
+
+<!-- career get in touch start -->
+<div class="full-width-container ">
+    <div class="container">
+        <div class="center-content">
+            <h1 class="center-heading text-primary mb-1">Career</h1>
+            <p class="center-paragraph">Get In Touch</p>
+            <p class="center-paragraph">Our People are Our Strength & Our Inspiration</p>
+        </div>
+        <div class="text-line">
+            <span class="left-text">
+                <b>
+                    <p class="phh">Why Tally Prime is Best Business Management Software ? </p>
+                </b>
+                <p class="ph">TallyPrime is a one-stop business management software that caters to all your business
+                    requirements – from accounting and invoicing to inventory management, insightful business
+                    reports, and cash flow management, thereby improving business efficiency.</p>
+                <br>            
+                
+            </span>
+            <span class="right-text">
+                <b>
+                    <p class="phh">What is the first time and ongoing costs of running TallyPrime?</p>
+                </b>
+                <p class="ph">One-time cost of 18,000 + GST 18% for Single user and 54,000 + GST 18% for a
+                    Multi-User License. From the second year onwards, you need to renew TSS to avail a host of
+                    value-added services.</p>
+                <br>             
+            </span>
+        </div>
+
+        <!-- image and description start -->
+        <div class="row g-5 mt-5">
+            <div class="col-lg-5" >
+                <div class="position-relative h-100">
+                    <img style="border-radius: 8px;height: 200px;width: 450px;margin-left: 50px;margin-top: 10px;" class="  wow zoomIn" 
+                           autoplay 
+                           muted 
+                           playsinline 
+                           data-wow-delay="0.9s" 
+                           src="{% static 'img/career.avif' %}" 
+                           style="object-fit: cover"></img>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="section-title position-relative pb-3 mb-5">
+                    <h1 class="mb-0">Your Quest to find a Right Career Ends Here</h1>
+                  </div>
+                  <p class="mb-4">
+                    Embarking on a career journey can be both exciting and challenging, but with the right guidance and resources, finding your ideal career path becomes a fulfilling experience. At Ajay Infotech, we are dedicated to helping you navigate the complexities of career choices and opportunities.
+                  </p>
+                  <a href="/contact" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- image and description end -->
+
+
+    </div>
+</div>
+<!-- career get in touch end -->
+
+{%include 'contactinfo.html'%}
+
+
+<!-- include foooter start -->
+{% include 'footer.html' %}
+<!-- include foooter end -->

@@ -86,6 +86,8 @@ urlpatterns = [
     path('downloadtp112', views.downloadtp112, name='downloadtp112'),
     # urls for tally prime 1.1.1 version download
     path('downloadtp111', views.downloadtp111, name='downloadtp111'),
+    # urls for career page
+    path('career/', views.career_page, name='career'),
 
 
     # other paths
