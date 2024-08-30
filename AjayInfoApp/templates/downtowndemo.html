@@ -1,23 +1,9 @@
-{% load static %}
-{% include 'navbar.html' %}
-
-<div class="container-fluid bg-primary py-5 bg-header">
-    <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">About</h1>
-            <!-- <a href="" class="h5 text-white">Home</a>
-            <i class="far fa-circle text-white px-2"></i>
-            <a href="" class="h5 text-white">Services</a> -->
-        </div>
-    </div>
-</div>
-
-<br><br><br>
 
 <div class="container">
     <div class="row">
         <!-- First Accordion Component -->
         <div class="col-md-6">
+            <h2 class="text-center text-primary mb-4">Tally Prime</h2> <!-- Title Added -->
             <div class="accordion" id="accordionOne">
                 <!-- Section 1 -->
                 <div class="accordion-item">
@@ -28,13 +14,28 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                         <div class="accordion-body">
-                            <p class="mb-0">1. TallyPrime with WhatsApp for Business</p>
-                            <p class="mb-0">2. Import Data from MS Excel</p>
-                            <p class="mb-0">3. Graphical Dashboard</p>
-                            <p class="mb-0"><b>Date - </b> 12 December 2023</p>
-                            <div class="btn-style">
-                                <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
-                            </div>
+                            <p class="mb-0">
+                                1.	TallyPrime with WhatsApp for Business
+                            </p>
+                            <p class="mb-0">
+                                2.	Import Data from MS Excel
+                            </p>
+                            <p class="mb-0">
+                                    3.	Graphical Dashboard
+                                </p>
+                                <p class="mb-0"><b>Date - </b> 12 December 2023</p>
+                                <div class="btn-style">
+                                    <a
+                                    href="{% url 'downloadtp4' %}"
+                                    class="btn btn-primary py-2 px-4 mt-4"
+                                    >Tally Prime Download </a
+                                    >
+                                    <a
+                                    href="{% url 'downloadtpel4' %}"
+                                    class="btn btn-primary py-2 px-4 mt-4"
+                                    >Tally Edit Log Download</a
+                                    >
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -47,12 +48,30 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
                         <div class="accordion-body">
-                            <p class="mb-0">1. Enhanced Security</p>
-                            <p class="mb-0">2. User Interface Improvements</p>
-                            <p class="mb-0">3. Integration with New Tools</p>
-                            <p class="mb-0"><b>Date - </b> 20 February 2024</p>
+                            <p class="mb-0">
+                                1.	Missing or invalid State for Consignee (Ship To) & Dispatch From
+                            </p>
+                            <p class="mb-0">
+                                2.	Mismatch between State and Pincode
+                            </p>
+                            <p class="mb-0">
+                                3.	Mismatch between HSN and Type of supply
+                            </p>
+                            <p class="mb-0">
+                                4.	Invoice numbers starting with zero
+                            </p>
+                            <p class="mb-0"><b>Date - </b> 21 July 2023</p>
                             <div class="btn-style">
-                                <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
+                                <a
+                                href="{% url 'downloadtp301' %}"
+                                class="btn btn-primary py-2 px-4 mt-4"
+                                >Tally Prime Download </a
+                                >
+                                <a
+                                href="{% url 'downloadtpel301' %}"
+                                class="btn btn-primary py-2 px-4 mt-4"
+                                >Tally Edit Log Download</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -91,6 +110,11 @@
                                 class="btn btn-primary py-2 px-4 mt-4"
                                 >Tally Prime Download </a
                                 >
+                                <a
+                                href="{% url 'downloadtpel3' %}"
+                                class="btn btn-primary py-2 px-4 mt-4"
+                                >Tally Edit Log Download</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -116,9 +140,14 @@
                             <p class="mb-0"><b>Date - </b> 21 March 2022</p>
                             <div class="btn-style">
                                 <a
-                                href="{% url 'downloadtpel21' %}"
+                                href="{% url 'downloadtp21' %}"
                                 class="btn btn-primary py-2 px-4 mt-4"
                                 >Tally Prime Download </a
+                                >
+                                <a
+                                href="{% url 'downloadtpel21' %}"
+                                class="btn btn-primary py-2 px-4 mt-4"
+                                >Tally Edit Log Download</a
                                 >
                           </div>
                         </div>
@@ -327,20 +356,21 @@
 
         <!-- Second Accordion Component -->
         <div class="col-md-6">
+            <h2 class="text-center text-primary mb-4">Tally Prime Edit Log</h2> <!-- Title Added -->
             <div class="accordion" id="accordionTwo">
-                <!-- Section 1 -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThirteen">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
-                            Version 4.0
+                            Release 6.5.1
                         </button>
                     </h2>
                     <div id="collapseThirteen" class="accordion-collapse collapse show" aria-labelledby="headingThirteen">
                         <div class="accordion-body">
-                            <p class="mb-0">1. WhatsApp Integration: Share invoices and reports directly.</p>
-                            <p class="mb-0">2. Enhanced Dashboard: Get real-time business insights.</p>
-                            <p class="mb-0">3. Audit Trail: Track changes for accountability.</p>
-                            <p class="mb-0"><b>Date - </b> 12 December 2023</p>
+                            <p class="mb-0">1. E-Way Bill: Added support for transporter's CEN and latest template.</p>
+                            <p class="mb-0">2. Income Tax: Incorporated Budget changes and generated returns.</p>
+                            <p class="mb-0">3. Other Changes: Separate columns for journals, payments, and debit; GSTR-3B export support.
+                            </p>
+                            <p class="mb-0"><b>Date - </b> 25 March 2019</p>
                             <div class="btn-style">
                                 <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
                             </div>
@@ -351,61 +381,36 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFourteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                            Version 3.0.1
+                            Release 6.5.3
                         </button>
                     </h2>
                     <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen">
                         <div class="accordion-body">
-                            <p class="mb-0">
-                               1. e-Invoicing Enhancements: Improved report, easier corrections, and smoother GST return filing.
-                            </p>
-                            <p class="mb-0">
-                              2.  Payment Request: Generate payment links and QR codes.
-                            </p>
-                            <p class="mb-0">
-                              3.  Improved Filters: Easily find specific vouchers.
-                            </p>
-                            <p class="mb-0"><b>Date - </b> 21 July 2023</p>
+                            <p class="mb-0">1. Bug Fixes: Resolved various issues.</p>
+                            <p class="mb-0">2. Enhanced UX: Improved user experience.</p>
+                            <p class="mb-0">3. GST Returns: Supported GSTR-9 and GSTR-9C export.</p>
+                            <p class="mb-0"><b>Date - </b> 30 July 2019</p>
                             <div class="btn-style">
-                                <a
-                                href="{% url 'downloadtpel301' %}"
-                                class="btn btn-primary py-2 px-4 mt-4"
-                                >Tally Edit Log Download</a
-                                >
+                                <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
                             </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Section 3 -->
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingFifteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                            Version 3.0
+                            Release 6.5.5
                         </button>
                     </h2>
                     <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen">
                         <div class="accordion-body">
-                            <p class="mb-0">
-                                1.	Enhanced e-Invoicing: Streamlined e-Invoice generation and management.
-                            </p>
-                            <p class="mb-0">
-                                2.	Improved GST Return Filing: Easier export and HSN/SAC features.
-                            </p>
-                            <p class="mb-0">
-                                3.	Payment Request: Generate payment links and QR codes.
-                            </p>
-                            <p class="mb-0">
-                                4.	Improved Filters: Easily find specific vouchers in reports.
-                            </p>
-                            <p class="mb-0">
-                                5.	Other Enhancements: Various improvements in VAT compliance for Oman, e-Invoicing cancellation, and invoice printing.
-                            </p>
-                            <p class="mb-0"><b>Date - </b> 12 June 2023</p>
+                            <p class="mb-0">1. Bug Fixes: Resolved various issues.</p>
+                            <p class="mb-0">2. Enhanced UX: Improved user experience.</p>
+                            <p class="mb-0">3. GST Returns: Supported GSTR-1 and GSTR-3B export.</p>
+                            <p class="mb-0"><b>Date - </b> 20 February 2024</p>
                             <div class="btn-style">
-                                <a
-                                href="{% url 'downloadtpel3' %}"
-                                class="btn btn-primary py-2 px-4 mt-4"
-                                >Tally Edit Log Download</a
-                                >
+                                <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
                             </div>
                         </div>
                     </div>
@@ -414,16 +419,15 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingSixteen">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                            Version 2.1
+                            Release 6.6.1
                         </button>
                     </h2>
                     <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen">
                         <div class="accordion-body">
-                            <p class="mb-0">1. Edit Log: Track changes in transactions.</p>
-                            <p class="mb-0">2. Digital Signature: Use dongle-based digital signatures.</p>
-                            <p class="mb-0">3. Product Choice: Choose TallyPrime or TallyPrime Edit Log.</p>
-                            <p class="mb-0">4. Enhanced Reports: Improved filtering and sorting.</p>
-                            <p class="mb-0"><b>Date - </b> 25 March 2024</p>
+                            <p class="mb-0">1. New Features: Each release introduces new functionalities like enhanced inventory management, improved payroll, and advanced reporting options.</p>
+                            <p class="mb-0">2. Performance Improvements: Faster loading times, optimized database performance, and better system stability.</p>
+                            <p class="mb-0">3. Compliance Updates: Regular updates to support the latest GST, income tax, and other statutory regulations.</p>
+                            <p class="mb-0"><b>Date - </b> 4 May 2020</p>
                             <div class="btn-style">
                                 <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
                             </div>
@@ -431,12 +435,28 @@
                     </div>
                 </div>
                 <!-- Section 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeventeen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                            Release 6.6.3
+                        </button>
+                    </h2>
+                    <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen">
+                        <div class="accordion-body">
+                            <p class="mb-0">1. Bug Fixes: Resolved various issues to improve stability and performance.</p>
+                            <p class="mb-0">2. Enhanced User Experience: Improved navigation and loading times.</p>
+                            <p class="mb-0">3. GST Return Filing: Updated support for GSTR-1 and GSTR-3B export.</p>
+                            <p class="mb-0"><b>Date - </b> 13 July 2020</p>
+                            <div class="btn-style">
+                                <a href="{% url 'downloadtp4' %}" class="btn btn-primary py-2 px-4 mt-4">Tally Prime Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section 6 -->
+                
             </div>
         </div>
     </div>
 </div>
 
-
-<!-- include footer start -->
- {%include 'footer.html'%}
-<!-- include footer end -->
