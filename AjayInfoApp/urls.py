@@ -94,7 +94,8 @@ urlpatterns = [
     path('team/', views.team_page, name='team'),
     # urls for featurs page
     path('features/', views.features_page, name='features'),
-
+    # domo for download page
+    path('downtowndemo/', views.downtowndemo, name='downtowndemo')
 
     # other paths
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

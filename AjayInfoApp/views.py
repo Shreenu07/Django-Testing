@@ -274,3 +274,8 @@ def team_page(request):
 # features page views
 def features_page(request):
     return render(request, 'feature.html')
+    
+
+
+def downtowndemo(request):
+    return render(request, 'downtowndemo.html')
